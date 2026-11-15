@@ -107,17 +107,12 @@
       ayuda: "Toca la 🌙 de la portada.",
       lista: () => P.almacen.leer("portafolio-probo-tema") === "1",
     },
-    {
-      titulo: "Gana el juego de memoria",
-      ayuda: "Encuentra los 6 pares en «Juega conmigo».",
-      lista: () => P.almacen.leer("portafolio-gano") === "1",
-    },
   ];
 
   // Misiones avanzadas: para quien ya programa o tiene proyectos en GitHub.
   // Las tres últimas piden construir algo nuevo, no solo llenar datos.
-  const SECCIONES_BASE = 7; // las secciones que trae el portafolio
-  const ARCHIVOS_BASE = ["datos.js", "app.js", "juego.js", "misiones.js"];
+  const SECCIONES_BASE = 6; // las secciones que trae el portafolio
+  const ARCHIVOS_BASE = ["datos.js", "app.js", "misiones.js"];
 
   const AVANZADAS = [
     {
@@ -159,15 +154,15 @@
   const NIVELES = [
     { desde: 0, nombre: "🌱 Principiante" },
     { desde: 4, nombre: "🧭 Explorador" },
-    { desde: 8, nombre: "🔧 Constructor" },
-    { desde: 12, nombre: "⚡ Casi Builder" },
+    { desde: 7, nombre: "🔧 Constructor" },
+    { desde: 10, nombre: "⚡ Casi Builder" },
     { desde: MISIONES.length, nombre: "🏆 Builder" },
   ];
 
   const boton = document.getElementById("boton-misiones");
   const panel = document.getElementById("panel-misiones");
   const elLista = document.getElementById("lista-misiones");
-  let celebrado = 0; // 0 = nada, 1 = las 14 misiones, 2 = también las avanzadas
+  let celebrado = 0; // 0 = nada, 1 = todas las misiones base, 2 = también las avanzadas
 
   function revisar(misiones) {
     return misiones.map((mision) => {
@@ -217,7 +212,7 @@
     dibujarGrupo("Misiones · " + hechas + " de " + total, MISIONES, estados);
     dibujarGrupo("⭐ Avanzadas · " + extra + " de " + totalExtra, AVANZADAS, estadosAvanzadas);
 
-    // Confeti al completar las 14 y otra vez al completar todo.
+    // Confeti al completar las misiones base y otra vez al completar todo.
     const logro = todo ? 2 : hechas === total ? 1 : 0;
     if (logro > celebrado && !panel.hidden) {
       celebrado = logro;
@@ -237,7 +232,7 @@
   document.addEventListener("keydown", (evento) => {
     if (evento.key === "Escape" && !panel.hidden) abrir(false);
   });
-  // El juego y el botón de tema avisan cuando algo cambia.
+  // El botón de tema avisa cuando algo cambia.
   document.addEventListener("portafolio:cambio", dibujar);
 
   dibujar();

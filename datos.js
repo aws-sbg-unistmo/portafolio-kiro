@@ -41,7 +41,7 @@ window.PORTAFOLIO = {
 
   // ---------- Mis intereses ----------
   // Puedes agregar o quitar tarjetas. Al tocar una tarjeta se voltea
-  // y muestra el «dato» curioso. Sus emojis también salen en el juego.
+  // y muestra el «dato» curioso. Sus emojis también flotan en la portada.
   intereses: [
     {
       emoji: "🎵",

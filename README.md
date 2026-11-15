@@ -1,6 +1,6 @@
 # Mi primer portafolio con Kiro
 
-Una página web personal que haces tuya en una hora. Trae portada animada, modo oscuro, tarjetas que se voltean, un juego de memoria, una sección para tus proyectos de GitHub y misiones que se van palomeando solas conforme la personalizas.
+Una página web personal que haces tuya en una hora. Trae portada animada, modo oscuro, tarjetas que se voltean, una sección para tus proyectos de GitHub y misiones que se van palomeando solas conforme la personalizas.
 
 Funciona en tu computadora con doble clic: no necesitas internet, instalar nada más ni tener cuenta de AWS.
 
@@ -37,7 +37,6 @@ Toca el botón **🎯 Misiones** en la esquina de la página. Te dice qué falta
 | `index.html` | La estructura de la página. |
 | `estilos.css` | El diseño y las animaciones. |
 | `app.js` | Dibuja tus datos en la página. |
-| `juego.js` | El juego de memoria. |
 | `misiones.js` | El panel de misiones. |
 | `.kiro/steering/` | Las reglas que Kiro sigue en este proyecto. |
 

@@ -33,7 +33,7 @@
 
   const sinAnimaciones = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
-  // Memoria del navegador (para recordar el tema y tu mejor puntaje).
+  // Memoria del navegador (para recordar el tema que elegiste).
   const almacen = {
     leer(clave) {
       try {
@@ -112,7 +112,7 @@
     setTimeout(() => capa.remove(), 4000);
   }
 
-  // Lo que comparten juego.js y misiones.js
+  // Lo que comparten app.js, misiones.js y los archivos que agregues
   window.Portafolio = { datos, crear, lista, almacen, confeti };
 
   // ============================================================

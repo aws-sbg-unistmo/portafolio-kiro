@@ -678,86 +678,6 @@ main {
   }
 }
 
-/* ---------- Juego de memoria ---------- */
-.marcador {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 8px 22px;
-  margin-bottom: 18px;
-  color: var(--texto-suave);
-}
-.marcador strong {
-  color: var(--texto);
-  font-size: 1.15rem;
-}
-.marcador .boton {
-  margin-left: auto;
-}
-.tablero {
-  display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  gap: 12px;
-}
-.carta {
-  aspect-ratio: 1;
-  padding: 0;
-  border: 0;
-  border-radius: 16px;
-  background: none;
-  perspective: 600px;
-}
-.carta-giro {
-  position: relative;
-  display: block;
-  width: 100%;
-  height: 100%;
-  transform-style: preserve-3d;
-  transition: transform 0.45s cubic-bezier(0.3, 1.3, 0.5, 1);
-}
-.carta.arriba .carta-giro {
-  transform: rotateY(180deg);
-}
-.carta-cara {
-  position: absolute;
-  inset: 0;
-  display: grid;
-  place-items: center;
-  border-radius: 16px;
-  font-size: clamp(1.5rem, 4.5vw, 2.5rem);
-  backface-visibility: hidden;
-  -webkit-backface-visibility: hidden;
-}
-.carta-dorso {
-  font-weight: 800;
-  background: var(--color-principal);
-  color: var(--texto-sobre-principal);
-}
-.carta:hover .carta-dorso {
-  filter: brightness(1.12);
-}
-.carta-emoji {
-  transform: rotateY(180deg);
-  border: 2px solid var(--borde);
-  background: var(--superficie-2);
-}
-.carta.encontrada .carta-emoji {
-  border-color: var(--color-secundario);
-  animation: brincar 0.5s ease;
-}
-@keyframes brincar {
-  40% {
-    transform: rotateY(180deg) scale(1.15);
-  }
-}
-.juego-mensaje {
-  min-height: 1.6em;
-  margin-top: 16px;
-  font-size: 1.15rem;
-  font-weight: 800;
-  text-align: center;
-}
-
 /* ---------- Contacto ---------- */
 .contacto {
   list-style: none;
@@ -995,10 +915,6 @@ main {
   .sobre-mi {
     grid-template-columns: 1fr;
     gap: 20px;
-  }
-  .tablero {
-    grid-template-columns: repeat(4, 1fr);
-    gap: 8px;
   }
   .meta .estado {
     display: none;

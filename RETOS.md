@@ -1,6 +1,6 @@
 # Retos extra
 
-¿Ya completaste las 14 misiones del botón 🎯? Ahora toca construir cosas nuevas con Kiro. Hay 15 retos en tres niveles y 6 misiones avanzadas para quien ya programa. Elige lo que más te llame; no hay que hacerlo en orden.
+¿Ya completaste las 13 misiones del botón 🎯? Ahora toca construir cosas nuevas con Kiro. Hay 15 retos en tres niveles y 6 misiones avanzadas para quien ya programa. Elige lo que más te llame; no hay que hacerlo en orden.
 
 Copia la petición, pégala en Kiro y ajústala a tu gusto.
 
@@ -52,13 +52,13 @@ Copia la petición, pégala en Kiro y ajústala a tu gusto.
 
 Para estos usa el modo **Spec** de Kiro: primero escribe los requisitos y un plan de tareas, y después programa paso a paso. Lee el plan antes de aceptarlo y pídele cambios si algo no te convence.
 
-**11. Memoria nivel difícil.** Mejora el juego que ya tienes.
+**11. Juego de memoria.** Encuentra los pares con los emojis de tus intereses.
 
-> Quiero que el juego de memoria tenga tres niveles (fácil con 6 pares, medio con 8, difícil con 10) y un cronómetro. Que guarde el mejor tiempo de cada nivel.
+> Quiero una sección «Juega conmigo» con un juego de memoria de 6 pares hecho con los emojis de mis intereses. Que cuente los intentos y guarde mi récord.
 
 **12. Un juego nuevo.** Elige uno: gato, piedra-papel-tijera, adivina el número o atrapa el emoji.
 
-> Quiero una segunda pestaña en la sección de juegos con [el juego que elijas] contra la computadora, con marcador.
+> Quiero una sección nueva con [el juego que elijas] contra la computadora, con marcador.
 
 **13. Quiz de la nube.** Demuestra lo que aprendiste hoy.
 
@@ -74,7 +74,7 @@ Para estos usa el modo **Spec** de Kiro: primero escribe los requisitos y un pla
 
 ## ⭐ Misiones avanzadas: si ya programas o tienes proyectos en GitHub
 
-Están en el mismo panel 🎯, debajo de las 14. Si ya tienes repositorios, puedes empezar por aquí desde el minuto uno.
+Están en el mismo panel 🎯, debajo de las 13. Si ya tienes repositorios, puedes empezar por aquí desde el minuto uno.
 
 **1 a 3. Presume tus proyectos.** El portafolio tiene una sección «Mis proyectos» que aparece sola cuando agregas el primero.
 
@@ -91,7 +91,7 @@ Están en el mismo panel 🎯, debajo de las 14. Si ya tienes repositorios, pued
 3. En el repositorio: **Settings → Pages → Deploy from a branch**, rama `main`, carpeta `/ (root)`, **Save**.
 4. En un minuto te da una dirección `https://tu-usuario.github.io/tu-repositorio/`.
 
-Para ver esta misión palomeada, vuelve a poner `misiones: true`, súbelo otra vez y abre tu dirección. Al completar las 14 y las 6 avanzadas llegas a 🚀 Súper Builder.
+Para ver esta misión palomeada, vuelve a poner `misiones: true`, súbelo otra vez y abre tu dirección. Al completar las 13 y las 6 avanzadas llegas a 🚀 Súper Builder.
 
 Si te ayuda, pídele a Kiro: «Explícame paso a paso cómo subir esta carpeta a un repositorio nuevo de GitHub».
 

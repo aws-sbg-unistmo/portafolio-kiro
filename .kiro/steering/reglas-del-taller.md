@@ -24,12 +24,11 @@ Estudiantes de bachillerato que están haciendo su primera página web. La mayor
 | `index.html` | La estructura de la página y sus secciones. |
 | `estilos.css` | El diseño: tamaños, espacios, formas. |
 | `app.js` | Lee `datos.js` y dibuja la página. Comparte ayudantes en `window.Portafolio` (`crear`, `lista`, `almacen`, `confeti`). |
-| `juego.js` | El juego de memoria de la sección «Juega conmigo». |
 | `misiones.js` | El panel 🎯 que revisa `datos.js` y palomea lo que ya se personalizó. |
 
 `datos.js` tiene una lista opcional `proyectos` (nombre, descripcion, tecnologias y enlace que empieza con `https://`); la sección «Mis proyectos» solo aparece si la lista tiene al menos uno. Al agregar un proyecto, escríbelo como objeto real dentro de los corchetes, no como comentario.
 
-Las misiones comparan `datos.js` contra los textos de ejemplo. Hay 14 misiones base y 6 avanzadas; dos de las avanzadas se cumplen al agregar una `<section>` nueva dentro de `<main>` y al agregar un archivo `.js` propio. Si cambias el nombre de un campo de `datos.js`, actualiza también su misión en `misiones.js`. Para ocultar el panel se usa `misiones: false` en `datos.js`; no borres el archivo.
+Las misiones comparan `datos.js` contra los textos de ejemplo. Hay 13 misiones base y 6 avanzadas; dos de las avanzadas se cumplen al agregar una `<section>` nueva dentro de `<main>` y al agregar un archivo `.js` propio. Si cambias el nombre de un campo de `datos.js`, actualiza también su misión en `misiones.js`. Para ocultar el panel se usa `misiones: false` en `datos.js`; no borres el archivo.
 
 Los retos nuevos (juegos, secciones, botones) van en un archivo `.js` propio que se agrega al final de `index.html`, en lugar de hacer crecer `app.js`.
 
