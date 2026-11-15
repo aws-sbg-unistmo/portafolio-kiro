@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Mi portafolio</title>
+    <meta name="description" content="Mi portafolio personal." />
+    <link rel="stylesheet" href="estilos.css" />
+  </head>
+  <body>
+    <a class="saltar" href="#contenido">Saltar al contenido</a>
+
+    <!-- Aviso que solo aparece si datos.js tiene un error -->
+    <div id="aviso-error" class="aviso-error" hidden>
+      <h2>Algo anda mal en <code>datos.js</code></h2>
+      <p>
+        Casi siempre es una comilla o una coma que falta. Revisa el último
+        renglón que cambiaste, o pídele a Kiro:
+        <em>«Revisa datos.js y corrige el error de sintaxis»</em>.
+      </p>
+    </div>
+
+    <!-- PORTADA -->
+    <header class="portada">
+      <!-- Emojis de tus intereses flotando de fondo -->
+      <div class="flotantes" id="flotantes" aria-hidden="true"></div>
+
+      <nav class="menu" aria-label="Secciones">
+        <a href="#sobre-mi">Sobre mí</a>
+        <a href="#intereses">Intereses</a>
+        <a href="#aprendiendo">Aprendiendo</a>
+        <a href="#proyectos">Proyectos</a>
+        <a href="#metas">Metas</a>
+        <a href="#juego">Juego</a>
+        <a href="#contacto">Contacto</a>
+        <button type="button" id="boton-tema" class="boton-tema" aria-label="Cambiar a modo oscuro">🌙</button>
+      </nav>
+
+      <div class="portada-centro">
+        <div class="avatar" id="avatar" aria-hidden="true"></div>
+        <p class="saludo" id="saludo"></p>
+        <h1 id="nombre"></h1>
+        <p class="rol" id="rol"></p>
+        <p class="maquina" id="maquina">
+          Soy <span class="palabra" id="palabra"></span><span class="cursor" aria-hidden="true"></span>
+        </p>
+        <p class="frase" id="frase"></p>
+      </div>
+
+      <svg class="ola" viewBox="0 0 1440 90" preserveAspectRatio="none" aria-hidden="true">
+        <path d="M0,50 C240,100 480,0 720,40 C960,80 1200,20 1440,55 L1440,90 L0,90 Z" />
+      </svg>
+    </header>
+
+    <main id="contenido">
+      <!-- SOBRE MÍ -->
+      <section id="sobre-mi" class="seccion">
+        <h2>Sobre mí</h2>
+        <div class="sobre-mi">
+          <p id="sobre-mi-texto" class="texto-grande"></p>
+          <dl id="datos-rapidos" class="datos-rapidos"></dl>
+        </div>
+      </section>
+
+      <!-- INTERESES -->
+      <section id="intereses" class="seccion">
+        <h2>Mis intereses</h2>
+        <p class="pista" id="pista-intereses">Toca una tarjeta para voltearla.</p>
+        <div id="lista-intereses" class="tarjetas"></div>
+      </section>
+
+      <!-- APRENDIENDO -->
+      <section id="aprendiendo" class="seccion">
+        <h2>Lo que estoy aprendiendo</h2>
+        <ul id="lista-aprendiendo" class="niveles"></ul>
+      </section>
+
+      <!-- PROYECTOS (solo aparece si agregas alguno en datos.js) -->
+      <section id="proyectos" class="seccion">
+        <h2>Mis proyectos</h2>
+        <div id="lista-proyectos" class="proyectos"></div>
+      </section>
+
+      <!-- METAS -->
+      <section id="metas" class="seccion">
+        <h2>Mis metas</h2>
+        <ul id="lista-metas" class="metas"></ul>
+      </section>
+
+      <!-- JUEGO -->
+      <section id="juego" class="seccion">
+        <h2>Juega conmigo</h2>
+        <p class="pista">Encuentra los pares. Los emojis salen de mis intereses.</p>
+        <div class="marcador">
+          <span>Intentos: <strong id="juego-intentos">0</strong></span>
+          <span>Pares: <strong id="juego-pares">0</strong></span>
+          <span id="juego-mejor"></span>
+          <button type="button" id="juego-reiniciar" class="boton">Barajar</button>
+        </div>
+        <div id="tablero-juego" class="tablero"></div>
+        <p id="juego-mensaje" class="juego-mensaje" role="status"></p>
+      </section>
+
+      <!-- CONTACTO -->
+      <section id="contacto" class="seccion">
+        <h2>Contacto</h2>
+        <ul id="lista-contacto" class="contacto"></ul>
+      </section>
+    </main>
+
+    <footer class="pie">
+      <p id="pie"></p>
+    </footer>
+
+    <!-- MISIONES: el panel que te guía (se apaga en datos.js) -->
+    <button type="button" id="boton-misiones" class="boton-misiones" aria-expanded="false" aria-controls="panel-misiones" hidden></button>
+    <aside id="panel-misiones" class="panel-misiones" aria-label="Misiones" hidden>
+      <header>
+        <div>
+          <p class="panel-etiqueta">Tu nivel</p>
+          <p class="panel-nivel" id="misiones-nivel"></p>
+        </div>
+        <button type="button" id="cerrar-misiones" class="cerrar" aria-label="Cerrar misiones">✕</button>
+      </header>
+      <div class="progreso" role="img" id="misiones-progreso"><span id="misiones-barra"></span></div>
+      <ul id="lista-misiones" class="lista-misiones"></ul>
+    </aside>
+
+    <!-- Primero tus datos, después el código que los dibuja -->
+    <script src="datos.js"></script>
+    <script src="app.js"></script>
+    <script src="juego.js"></script>
+    <script src="misiones.js"></script>
+  </body>
+</html>
